@@ -1,0 +1,2 @@
+Data được lấy từ https://www.yelp.com/dataset
+Data kéo xuông dưới dạng json sử dụng jsontocsv để chuyển sang csv
