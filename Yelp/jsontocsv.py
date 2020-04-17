@@ -2,32 +2,15 @@ import sys
 import json
 import csv
 import io
+ 
+   #python ConvertYelp.py yelp_academic_dataset_review.json
+   #python ConvertYelp.py yelp_academic_dataset_user.json
+   #python ConvertYelp.py yelp_academic_dataset_business.json
+   
 
-"""ConvertYelp
-Written by:  Robert Chen
-Date:        1/10/2016
-Processes one of 3 Yelp JSON files.  It reads in the JSON data, extracts the fields
-needed from that file, and writes the result to a CSV file.
-The "json" and "csv" libraries are used for handling the input and output.  The encode
-method is used to handle unicode characters that appear in "name" and "city" in the Yelp
-"business" data file and in "name" in the Yelp "user" data file.
-To use, type the following commands:
-   python ConvertYelp.py yelp_academic_dataset_review.json
-   python ConvertYelp.py yelp_academic_dataset_user.json
-   python ConvertYelp.py yelp_academic_dataset_business.json
-   
-   A corresponding .csv file is generated for each run.   
-   
-"""
 
 
 def filter_and_convert_to_csv(filename):
-    """
-    Open the specified file.  The file is either the "review", "user", or "business" file.
-    Depending on the type of file it is, read in certain fields and then save the result
-    in CSV format.
-    """
-
     if "review" in filename:
 
         outputFile = open('yelp_academic_dataset_review.csv', 'w')
